@@ -1,0 +1,82 @@
+                    .container {
+                    display: flex;
+                    width: 100%;
+                    background: #000;
+                    height: 100px;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
+                
+                h1 {
+                    color: #fff;
+                    margin: 0;
+                    font-size: 20px;
+                    width: 50%;
+                }
+                
+                #menu {
+                    padding: 0 15px 0 0;
+                    margin: 0px;
+                    background: #000;
+                    list-style: none;
+                    color: #fff;
+                }
+                
+                #menu li {
+                    display: inline;
+                    position: relative;
+                }
+                
+                menu li a {
+                    color: #fff;
+                    text-decoration: none;
+                    padding: 5px 10px;
+                    display: inline;
+                }
+                
+                menu li a:houver {
+                    background: #000;
+                    color: #fff;
+                    text-shadow: 0 0 0 5px #fff;
+                }
+                
+                menu li ul {
+                    position: absolute;
+                    top: 35px;
+                    left: 0;
+                    background: #000;
+                    display: none;
+                }
+                
+                menu li:hover ul,
+                menu li.over ul {
+                    display: block;
+                    margin: 0 0 15px 0;
+                }
+                
+                menu li ul li {
+                    display: block;
+                    width: 200px
+                }
+                
+                .dog1 {
+                    color: #fff;
+                    font-size: 15px;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    width: 40%;
+                }
+                
+                .row {
+                    flex-direction: row;
+                }
+                
+                .texto {
+                    font-size: 18px
+                }
+                
+                body {
+                    font-family: : Arial, Helvetica, sans-serif;
+                    font-size: 12px;
