@@ -1,3 +1,8 @@
+<?php
+    include '../controler/doggoControler.php'
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,14 +48,14 @@
                         <a class="nav-link text-uppercase text-expanded" href="about.html">Projeto</a>
                     </li>
                     <li class="nav-item px-lg-4">
-                        <a class="nav-link text-uppercase text-expanded" href="products.html">Adote</a>
+                        <a class="nav-link text-uppercase text-expanded" href="adotar.html">Adote</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <section class="page-section clearfix">
+    <!-- <section class="page-section clearfix">
         <div class="container">
             <div class="intro">
                 <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/dog1.jpg" alt="">
@@ -105,7 +110,13 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+    <?php
+
+    echo '<tr>CU<tr>';
+
+    ?>
 
     <footer class="footer text-faded text-center py-5">
         <div class="container">

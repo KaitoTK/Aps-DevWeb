@@ -52,6 +52,63 @@
             </div>
         </div>
     </nav>
+    
+    <!-- <section class="page-section clearfix">
+        <div class="container">
+            <div class="intro">
+                <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/dog1.jpg" alt="">
+                <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-upper">Fabinho</span>
+                        <span class="section-heading-lower">Alegrão</span>
+                    </h2>
+                    <p class="mb-3"> Esse doguera é legal
+                    </p>
+                    <div class="intro-button mx-auto">
+                        <a class="btn btn-primary btn-xl" href="#">Me Adote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section clearfix">
+        <div class="container">
+            <div class="intro">
+                <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/dog2.jpeg" alt="">
+                <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-upper">Liu</span>
+                        <span class="section-heading-lower">Brincalhão</span>
+                    </h2>
+                    <p class="mb-3"> Ele gosta de dar mordicadas
+                    </p>
+                    <div class="intro-button mx-auto">
+                        <a class="btn btn-primary btn-xl" href="#">Me Adote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section clearfix">
+        <div class="container">
+            <div class="intro">
+                <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/dog3.jpg" alt="">
+                <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-upper">Xuquini</span>
+                        <span class="section-heading-lower">Contente</span>
+                    </h2>
+                    <p class="mb-3"> Muito feliz e amigavel
+                    </p>
+                    <div class="intro-button mx-auto">
+                        <a class="btn btn-primary btn-xl" href="#">Me Adote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
 
     <footer class="footer text-faded text-center py-5">
         <div class="container">
