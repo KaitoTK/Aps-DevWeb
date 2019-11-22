@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="Adocao mb-4">
+        <div class="body-form space-around">
+            <h1 class="pt-4">Adote seu amiguinho <3</h1>
+            <form action="<?= $this->apiUrl ?>/api/adota_doggo" id="attdg" method="post">
+                <input type="hidden" name="id_doggo" value="<?= $id_doggo ?>">
+                <div class="form-row">
+                    <div class="form-group col-lg-6">
+                        <label for="Doggo">Nome do Doggo</label>
+                        <input type="text" class="form-control" required="true"  id="Doggo" name="Doggo" value="<?= $good_boi->Nome ?>">
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label for="Dono">Nome do Dono</label>
+                        <input type="text" class="form-control" required="true" id="Dono" name="Dono">
+                    </div>
+                </div>
+                <button type="submit" value="adotar_doggo" class="btn btn-primary botao">Adotar</button>
+            </form>
+        </div>
+    </div>
+</div>
