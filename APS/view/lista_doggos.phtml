@@ -1,0 +1,22 @@
+<?php include "model/doggo.php";?>
+
+<h2 class="site-heading text-white d-none d-md-block">Lista de Doggos</h2>
+<?php foreach($doggos as $doggo) { ?>
+    
+    <div class="container col-md-12">
+        <div class="intro">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/dog1.jpg" alt="">
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">
+                    <span class="section-heading-upper"><?= $doggo -> Nome ?> | <?= $doggo -> Raca ?></span>
+                    <span class="section-heading-lower"><?= $doggo -> Idade ?> anos</span>
+                </h2>
+                <p class="mb-3"> <?= $doggo -> Descricao ?></p>
+                <div class="intro-button mx-auto">
+                    <a class="btn btn-primary btn-xl" href="<?= $this->apiUrl ?>/adotar_doggo?id=<?= $doggo-> Id ?>">Me Adote</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<?php } ?>

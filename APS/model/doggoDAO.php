@@ -4,9 +4,7 @@ class DoggoDAO{
 
     function insert($nome, $raca, $idade, $desc){
         try{
-            $conn = new PDO('mysql:host=localhost;dbname=doggo', 'root', '');
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $stmt = $conn->prepare('INSERT INTO doggo (Nome, Raca, Idade, Descricao) VALUES (:nome, :raca, :idade, :descricao)');
+            $stmt = db::conn()->prepare('INSERT INTO doggo (Nome, Raca, Idade, Descricao) VALUES (:nome, :raca, :idade, :descricao)');
             $stmt->execute(array(':nome' => "$nome", ':raca' => "$raca", ':idade' => "$idade", ':descricao' => "$desc"));
 
         } catch (PDOException $e) {
@@ -14,29 +12,14 @@ class DoggoDAO{
         }
     }
 
-    function list(){
-            // $conn = new PDO('mysql:host=localhost;dbname=doggo', 'root', '');
-            // $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            
-            // $consulta = $conn->query('SELECT * FROM doggo');
-
-            echo '<section class="page-section clearfix">
-                <div class="container">
-                    <div class="intro">
-                        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/dog1.jpg" alt="">
-                        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-                            <h2 class="section-heading mb-4">
-                                <span class="section-heading-upper">Fabinho</span>
-                                <span class="section-heading-lower">Alegrão</span>
-                            </h2>
-                            <p class="mb-3"> Esse doguera é legal</p>
-                            <div class="intro-button mx-auto">
-                                <a class="btn btn-primary btn-xl" href="#">Me Adote</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>';
+    function lista_doggos(){
+        try{
+            $stmt = db::conn()->prepare("SELECT * FROM doggo");
+            $stmt -> execute();
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+        }catch(PDOException $e){
+            return [];
+        }
     }
 
     function update($nome, $raca, $idade, $desc, $id){
