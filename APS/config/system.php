@@ -5,7 +5,7 @@
         }
 
         public static function path(){
-            return "/adote_um_doggo";
+            return "/adote_um_doggo/";
         }
 
         // public static function isLogged() {

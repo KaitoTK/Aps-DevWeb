@@ -24,6 +24,11 @@
             $this->content = "view/lista_doggos.phtml";
             include "view/base.phtml";
         }
+
+        function inserir_doggo() {
+            $this->content = "view/insere_doggo.phtml";
+            include "view/base.phtml";
+        }
     }
 
 ?>

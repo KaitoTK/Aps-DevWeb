@@ -1,0 +1,81 @@
+<?php if($this->msg == "sucesso-cadastrar") { ?>
+    <div class="alert alert-success alert-dismissible fade show" role="alert" id="alert">
+    Patrimônio cadastrado com sucesso!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="document.getElementById('alert').style.display = 'none'">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+<?php } ?>  
+
+<?php if($this->msg == "erro-cadastrar") { ?>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert" id="alert">
+    Erro ao cadastrar patrimônio!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="document.getElementById('alert').style.display = 'none'">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+<?php } ?>
+
+<?php if($this->msg == "sucesso-atualizar") { ?>
+    <div class="alert alert-success alert-dismissible fade show" role="alert" id="alert">
+    Patrimônio atualizado com sucesso!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="document.getElementById('alert').style.display = 'none'">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+<?php } ?>  
+
+<?php if($this->msg == "erro-atualizar") { ?>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert" id="alert">
+    Erro ao aatualizar patrimonio!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="document.getElementById('alert').style.display = 'none'">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+<?php } ?>
+
+<?php if($this->msg == "sucesso-excluir") { ?>
+    <div class="alert alert-success alert-dismissible fade show" role="alert" id="alert">
+    Patrimônio excluído com sucesso!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="document.getElementById('alert').style.display = 'none'">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+<?php } ?>  
+
+<?php if($this->msg == "erro-excluir") { ?>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert" id="alert">
+    Erro ao excluir patrimonio!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="document.getElementById('alert').style.display = 'none'">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+<?php } ?>
+
+<h2>Lista de Patrimônios Cadastrados</h2>
+<div class="table-responsive">
+    <table class="table table-striped table-sm">
+    <thead>
+        <tr>
+        <th>ID</th>
+        <th>Descrição</th>
+        <th>Data de inclusão</th>
+        <th>Status</th>
+        <th></th>
+        <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($lista as $item) { ?>
+            <tr>
+            <td><?= $item->id ?></td>
+            <td><?= $item->descricao ?></td>
+            <td><?= $item->dataDeInclusao ?></td>
+            <td><?= $item->status ?></td>
+            <td><a class="far fa-edit" href="<?= $this->apiUrl ?>/atualizar-patrimonio?id=<?= $item->id ?>"></a></td>
+            <td><a class="far fa-trash-alt" href="<?= $this->apiUrl ?>/deletar-patrimonio?id=<?= $item->id ?>"></a></td>
+            </tr>
+        <?php } ?>
+    </tbody>
+    </table>
+</div>

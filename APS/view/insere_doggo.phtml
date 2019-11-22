@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="Adocao mb-4">
+        <div class="body-form space-around">
+            <h1 class="pt-4">Adote seu amiguinho</h1>
+            <form action="<?= $this->apiUrl ?>/api/inserir_doggo" id="opdg">
+                <div class="form-row">
+                    <div class="form-group col-lg-10">
+                        <label for="Nome">Nome Completo</label>
+                        <input type="name" class="form-control" id="Nome">
+                    </div>
+                    <div class="form-group col-lg-2">
+                        <label for="Raca">Idade</label>
+                        <input type="number" min="1" max="25"class="form-control" id="Idade">
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label for="Idade">Raça</label>
+                        <input type="raca" class="form-control" id="Raca">
+                    </div>
+                    <div class="form-group col-lg-12">
+                        <label for="Descricao">Descrição</label>
+                        <textarea form="opdg" class="form-control" rows="10" id="Descricao"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary botao">Adotar</button>
+            </form>
+        </div>
+    </div>
+</div>

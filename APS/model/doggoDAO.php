@@ -2,7 +2,7 @@
 
 class DoggoDAO{
 
-    function insert($nome, $raca, $idade, $desc){
+    function inserir_doggo($nome, $raca, $idade, $desc){
         try{
             $stmt = db::conn()->prepare('INSERT INTO doggo (Nome, Raca, Idade, Descricao) VALUES (:nome, :raca, :idade, :descricao)');
             $stmt->execute(array(':nome' => "$nome", ':raca' => "$raca", ':idade' => "$idade", ':descricao' => "$desc"));
@@ -22,10 +22,10 @@ class DoggoDAO{
         }
     }
 
-    function update($nome, $raca, $idade, $desc, $id){
+    function update_doggo($nome, $raca, $idade, $desc, $id){
         $conn = new PDO('mysql:host=localhost;dbname=doggo', 'root', '');
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $stmt = $conn->prepare('UPDATE TABLE doggo SET Nome = :nome, RAca = :raca, Idade = :idade, Descricao = :descricao) WHERE ID=:id');
+        $stmt = $conn->prepare('UPDATE TABLE doggo SET Nome = :nome, Raca = :raca, Idade = :idade, Descricao = :descricao) WHERE ID=:id');
         $stmt->execute(array(':nome' => "$nome", ':raca' => "$raca", ':idade' => "$idade", ':descricao' => "$desc", ':id' => "$id"));
         
     }

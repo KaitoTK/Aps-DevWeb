@@ -1,0 +1,16 @@
+<h2>Cadastrar Patrimônio</h2>
+<form action="<?= $this->apiUrl ?>/api/cadastraPatrimonio" method="post">
+    <div class="col-md-6 mb-3">
+        <label for="descricaoPatrimonio">Descrição</label>
+        <input type="text" class="form-control" id="descricaoPatrimonio" name="descricaoPatrimonio" required="true">
+    </div>
+    <div class="col-md-6 mb-3">
+        <label for="dataDeInclusao">Data de inclusão</label>
+        <input type="date" class="form-control" id="dataDeInclusao" name="dataDeInclusao" required="true">
+    </div>
+    <div class="col-md-6 mb-3">
+        <label for="status">Status</label>
+        <input type="text" class="form-control" id="status" name="status" required="true">
+    </div>
+    <input type="submit" value="Cadastrar">
+</form>
