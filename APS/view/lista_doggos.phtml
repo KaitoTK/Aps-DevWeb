@@ -1,0 +1,23 @@
+<h2 class="container site-heading text-white d-none d-md-block">Lista de Doggos</h2>
+<?php foreach($doggos as $doggo) { ?>
+
+    <section class="page-section clearfix">
+        <div class="container col-md-5">
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">
+                    <span class="section-heading-upper">
+                        <a href="<?= $this->apiUrl ?>/goodest_boi?id_doggo=<?= $doggo-> ID ?>">
+                            <?= $doggo -> Nome ?> | <?= $doggo -> Raca ?>
+                        </a>
+                    </span>
+                    <span class="section-heading-lower"><?= $doggo -> Idade ?> anos</span>
+                </h2>
+                <p class="mb-3"> <?= $doggo -> Descricao ?></p>
+                <div class="intro-button mx-auto">
+                    <a class="btn btn-primary btn-xl" href="<?= $this->apiUrl ?>/adota_doggo?id_doggo=<?= $doggo-> ID ?>">Me Adote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<?php } ?>

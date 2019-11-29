@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="Adocao mb-4">
+        <div class="body-form space-around">
+            <h1 class="pt-4">Adote seu amiguinho <3</h1>
+            <form action="<?= $this->apiUrl ?>/api/atualiza_doggo" id="attdg" method="post">
+                <input type="hidden" name="id_doggo" value="<?= $id_doggo ?>">
+                <div class="form-row">
+                    <div class="form-group col-lg-10">
+                        <label for="Nome">Nome do Doggo</label>
+                        <input type="text" class="form-control" id="Nome" name="Nome" value="<?= $good_boi->Nome ?>">
+                    </div>
+                    <div class="form-group col-lg-2">
+                        <label for="Idade">Idade</label>
+                        <input type="number" min="1" max="25"class="form-control" id="Idade" name="Idade" value="<?= $good_boi->Idade ?>">
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label for="Raca">Raça</label>
+                        <input type="text" class="form-control" id="Raca" name="Raca" value="<?= $good_boi->Raca ?>">
+                    </div>
+                    <div class="form-group col-lg-12">
+                        <label for="Descricao">Descrição</label>
+                        <textarea form="attdg" class="form-control" rows="10" id="Descricao" name="Descricao"><?= $good_boi->Descricao ?></textarea>
+                    </div>
+                </div>
+                <button type="submit" value="atualizar_doggo" class="btn btn-primary botao">Atualizar</button>
+            </form>
+        </div>
+    </div>
+</div>

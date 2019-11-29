@@ -1,0 +1,17 @@
+<h2 class="container site-heading text-white d-none d-md-block">Lista de Doggo que estão Felizes</h2>
+<?php foreach($doggos_felizes as $adotado) { ?>
+
+    <section class="page-section clearfix">
+        <div class="container col-md-5">
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">
+                    <span class="section-heading-upper">
+                            <?= $adotado -> Dono ?> | <?= $adotado -> Doggo ?>
+                    </span>
+                </h2>
+                <p class="mb-3">Adotado em <?= $adotado -> Data ?></p>
+            </div>
+        </div>
+    </section>
+
+<?php } ?>
